@@ -1,0 +1,117 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-text-lead__content {
+    position: relative;
+    z-index: 1;
+  }
+  .block-text-lead__content::before, .block-text-lead__content::after {
+    width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    height: calc(100% + 10.625rem);
+    border-radius: 1.25rem;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  @media (min-width: 36rem) {
+    .block-text-lead__content::before, .block-text-lead__content::after {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-text-lead__content::before, .block-text-lead__content::after {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-text-lead__content::before, .block-text-lead__content::after {
+      width: calc(var(--columnWidth) * 10 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 10 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  .block-text-lead__content::before {
+    z-index: -2;
+  }
+  .block-text-lead__content::after {
+    z-index: -1;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(160, 182, 232, 0.44) 0%, rgba(160, 182, 232, 0) 100%);
+    opacity: 0.5;
+  }
+  .block-hero-display + .block-text-lead.is-style-boxed, .block-hero-standard + .block-text-lead.is-style-boxed {
+    margin-top: clamp(-5rem, 0.0892857143rem + -5.6547619048vw, -2.625rem);
+    padding-top: 0;
+  }
+  .block-hero-display + .block-content-section .block-text-lead.is-style-boxed:first-child, .block-hero-standard + .block-content-section .block-text-lead.is-style-boxed:first-child {
+    margin-top: clamp(-14rem, -2.4821428571rem + -12.7976190476vw, -8.625rem);
+    padding-top: 0;
+  }
+  .block-content-section.bg-gray-5 .block-text-lead.is-style-boxed .block-text-lead__content::before, .block-text-lead.is-style-boxed.bg-gray-5 .block-text-lead__content::before {
+    background-color: #fcfcfc;
+  }
+  .block-text-lead.is-style-boxed .block-text-lead__content {
+    padding: clamp(3rem, -0.4285714286rem + 7.1428571429vw, 6rem) 0;
+  }
+  @media (max-width: 61.98rem) {
+    .block-text-lead.is-style-boxed .block-text-lead__content {
+      padding-right: 1.25rem;
+      padding-left: 1.25rem;
+    }
+  }
+  .block-text-lead.is-style-boxed .block-text-lead__content::before, .block-text-lead.is-style-boxed .block-text-lead__content::after {
+    width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    height: 100%;
+  }
+  @media (min-width: 36rem) {
+    .block-text-lead.is-style-boxed .block-text-lead__content::before, .block-text-lead.is-style-boxed .block-text-lead__content::after {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-text-lead.is-style-boxed .block-text-lead__content::before, .block-text-lead.is-style-boxed .block-text-lead__content::after {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  .block-text-lead.is-style-boxed .block-text-lead__content::before {
+    background-color: #f0f2f9;
+  }
+  .block-text-lead.is-style-boxed .block-text-lead__content > *:first-child {
+    margin-top: 0 !important;
+  }

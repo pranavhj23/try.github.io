@@ -1,0 +1,114 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-cards--2 {
+  max-width: 68rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 48rem) and (max-width: 61.98rem) {
+  .block-cards--4 .block-cards__grid,
+.block-cards--4 .block-cards__visible-card-wrapper,
+.block-cards--4 .block-cards__hidden-card-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.block-cards--toggle .block-cards__grid {
+  display: contents;
+}
+.content-wrapper > .block-cards {
+  width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+  max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 36rem) {
+  .content-wrapper > .block-cards {
+    width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+  }
+}
+@media (min-width: 48rem) {
+  .content-wrapper > .block-cards {
+    width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+  }
+}
+.acf-block.bg-white + .block-cards, .acf-block.bg-transparent + .block-cards {
+  margin-top: 0;
+}
+.block-cards + .acf-block.bg-white,
+.block-cards + .acf-block.bg-transparent {
+  margin-top: clamp(-4.5rem, -1.2857142857rem + -3.5714285714vw, -3rem);
+}
+.block-cards:not(:first-child) {
+  margin-top: clamp(3rem, 1.2857142857rem + 3.5714285714vw, 4.5rem);
+}
+.block-cards:not(:last-child) {
+  margin-bottom: clamp(3rem, 1.2857142857rem + 3.5714285714vw, 4.5rem);
+}
+.block-cards__grid, .block-cards__visible-card-wrapper, .block-cards__hidden-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: clamp(1.5rem, 0.9285714286rem + 1.1904761905vw, 2rem);
+  column-gap: clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem);
+}
+@media (min-width: 36rem) {
+  .block-cards__grid, .block-cards__visible-card-wrapper, .block-cards__hidden-card-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 48rem) {
+  .block-cards__grid, .block-cards__visible-card-wrapper, .block-cards__hidden-card-wrapper {
+    grid-template-columns: repeat(var(--cardsPerRow, 3), minmax(0, 1fr));
+  }
+}
+.block-cards__visible-card-wrapper {
+  margin-bottom: clamp(1.5rem, 0.9285714286rem + 1.1904761905vw, 2rem);
+}
+.block-cards__load-more-button-wrapper {
+  margin: 0 !important;
+  text-align: center;
+}
+@media (min-width: 36rem) {
+  .block-cards__load-more-button-wrapper {
+    grid-column: 1/span 2;
+  }
+}
+@media (min-width: 48rem) {
+  .block-cards__load-more-button-wrapper {
+    grid-column: 1/span var(--cardsPerRow, 3);
+  }
+}
+/* .block-cards__load-more-button-wrapper.inactive {
+  display: none;
+} */

@@ -1,0 +1,66 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-icon {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.75rem;
+    line-height: 0;
+    border-radius: 0.5rem;
+    background-color: #f0f2f9;
+  }
+  .block-icon--start {
+    text-align: left;
+  }
+  .block-icon--center {
+    text-align: center;
+  }
+  .block-icon--end {
+    text-align: right;
+  }
+  .block-icon:not(:first-child) {
+    margin-top: 2rem;
+  }
+  .block-icon:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .block-icon__icon {
+    font-size: 2.5rem;
+  }
+  .block-icon__icon::before {
+    background-image: linear-gradient(90deg, #0587be 0%, #0737cf 50%, #0a1151 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }

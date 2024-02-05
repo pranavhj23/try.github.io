@@ -1,0 +1,139 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-logos {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: clamp(-2rem, 0.1428571429rem + -2.380952381vw, -1rem);
+  }
+  .block-logos--carousel {
+    left: 50%;
+    display: block;
+    width: calc(var(--vw, 1vw) * 100);
+    height: clamp(3.625rem, 2.0535714286rem + 3.2738095238vw, 5rem);
+    margin-bottom: 0;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+  .block-logos:not(:first-child) {
+    margin-top: clamp(3rem, 1.2857142857rem + 3.5714285714vw, 4.5rem);
+  }
+  .block-logos + .block-logos {
+    margin-top: clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem);
+  }
+  .block-logos + *:not(.block-logos) {
+    margin-top: clamp(3rem, 1.2857142857rem + 3.5714285714vw, 4.5rem);
+  }
+  .block-logos__logo-wrapper {
+    display: flex;
+    flex: 0 0 var(--logoWidthMobile, 50%);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem);
+  }
+  @media (min-width: 36rem) {
+    .block-logos__logo-wrapper {
+      flex: 0 0 var(--logoWidthTablet, 33.33333333%);
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-logos__logo-wrapper {
+      flex: 0 0 var(--logoWidthDesktop, 16.66666667%);
+    }
+  }
+  .block-logos__carousel .block-logos__logo-wrapper {
+    flex: clamp(9.75rem, 2.6071428571rem + 14.880952381vw, 16rem);
+    width: clamp(9.75rem, 2.6071428571rem + 14.880952381vw, 16rem);
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .block-logos__carousel {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: var(--logoCarouselContainerWidth, 105rem);
+    height: clamp(3.625rem, 2.0535714286rem + 3.2738095238vw, 5rem);
+    max-width: calc(var(--vw, 1vw) * 100);
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 5%, black 95%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 5%, black 95%, rgba(0, 0, 0, 0));
+  }
+  .block-logos__carousel-inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .block-logos__carousel-inner[data-id="1"] {
+    transform: translate(0, -50%);
+    animation: logoAnimation var(--carouselSpeed, 40s) calc(var(--carouselSpeed, 40s) / -2 - var(--carouselSpeed, 40s) * 0.25) linear infinite;
+  }
+  .block-logos__carousel-inner[data-id="2"] {
+    transform: translate(100%, -50%);
+    animation: logoAnimation var(--carouselSpeed, 40s) calc(var(--carouselSpeed, 40s) * -1 - var(--carouselSpeed, 40s) * 0.25) linear infinite;
+  }
+  .block-logos__logo-figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: clamp(3.625rem, 2.0535714286rem + 3.2738095238vw, 5rem);
+    padding: 1rem;
+    border-radius: 100rem;
+    background-color: #fcfcfc;
+  }
+  .bg-white .block-logos__logo-figure {
+    background-color: #f0f2f9;
+  }
+  .block-logos__logo {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  @keyframes logoAnimation {
+    from {
+      transform: translate(100%, -50%);
+    }
+    to {
+      transform: translate(-100%, -50%);
+    }
+  }

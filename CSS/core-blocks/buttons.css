@@ -1,0 +1,102 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.wp-block-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  .wp-block-buttons:not(:first-child) {
+    margin-top: clamp(1.5rem, 0.6428571429rem + 1.7857142857vw, 2.25rem);
+  }
+  .wp-block-buttons:not(:last-child) {
+    margin-bottom: clamp(1.5rem, 0.6428571429rem + 1.7857142857vw, 2.25rem);
+  }
+  .wp-block-buttons.is-vertical {
+    flex-direction: column;
+  }
+  .wp-block-buttons.is-vertical > .wp-block-button:last-child {
+    margin-bottom: 0;
+  }
+  .wp-block-buttons > .wp-block-button {
+    display: inline-block;
+  }
+  .wp-block-buttons.is-content-justification-left {
+    justify-content: flex-start;
+  }
+  .wp-block-buttons.is-content-justification-left.is-vertical {
+    align-items: flex-start;
+  }
+  .wp-block-buttons.is-content-justification-center {
+    justify-content: center;
+  }
+  .wp-block-buttons.is-content-justification-center.is-vertical {
+    align-items: center;
+  }
+  .wp-block-buttons.is-content-justification-right {
+    justify-content: flex-end;
+  }
+  .wp-block-buttons.is-content-justification-right.is-vertical {
+    align-items: flex-end;
+  }
+  .wp-block-buttons.is-content-justification-space-between {
+    justify-content: space-between;
+  }
+  .wp-block-buttons.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  .wp-block-buttons.alignleft {
+    margin-right: auto;
+    margin-left: 0;
+    text-align: left;
+  }
+  .wp-block-buttons.alignright {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+  .wp-block-buttons:not(.is-content-justification-space-between, .is-content-justification-right, .is-content-justification-left, .is-content-justification-center) .wp-block-button.aligncenter {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .wp-block-buttons[style*=text-decoration] .wp-block-button,
+  .wp-block-buttons[style*=text-decoration] .wp-block-button__link {
+    text-decoration: inherit;
+  }
+  .wp-block-buttons.has-custom-font-size .wp-block-button__link {
+    font-size: inherit;
+  }

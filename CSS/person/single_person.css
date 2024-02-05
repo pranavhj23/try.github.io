@@ -1,0 +1,270 @@
+@charset "UTF-8";
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.people-single {
+  padding-top:clamp(0rem, 0rem + 4.333333vw, 9.5rem);
+}
+@media (max-width: 47.98rem) {
+  .people-single__content-col {
+    display: contents;
+  }
+}
+@media (min-width: 48rem) {
+  .people-single__content-col {
+    order: 2;
+  }
+}
+.people-single__content {
+  width: 100%;
+}
+@media (max-width: 47.98rem) {
+  .people-single__content {
+    order: 3;
+    padding: 0 calc(clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem) / 2);
+  }
+}
+.people-single__title {
+  width: 100%;
+  margin-bottom: clamp(0rem, 1.2857142857rem + 3.5714285714vw, 1.5rem);
+}
+@media (max-width: 47.98rem) {
+  .people-single__title {
+    padding: 0 calc(clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem) / 2);
+  }
+}
+.people-single__meta {
+  font-size: 0;
+  line-height: 0;
+}
+.people-single__meta span {
+  font-size: var(--h5-font-size);
+  line-height: var(--h5-line-height);
+}
+.people-single__meta span:not([class]) {
+  font-weight: var(--t3-font-weight);
+  font-size: var(--t3-font-size);
+  font-family: var(--t3-font-family);
+  line-height: var(--t3-line-height);
+  color: #343a7a;
+}
+.people-single__mobile-title .people-single__meta span:not([class]) {
+  color: #fcfcfc;
+}
+.people-single__meta span:not(:last-child)::after {
+  content: "•";
+  display: inline-block;
+  width: 0.5rem;
+  margin: auto 1rem;
+  color: transparent;
+  background-color: #bdbfd1;
+  clip-path: circle(0.25rem at 50% 50%);
+}
+.people-single__navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: clamp(3rem, 1.2857142857rem + 3.5714285714vw, 4.5rem);
+  padding-top: clamp(2rem, 0.8571428571rem + 2.380952381vw, 3rem);
+  border-top: 1px solid #bdbfd1;
+}
+@media (min-width: 48rem) and (max-width: 61.98rem) {
+  .people-single__navigation {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 35.98rem) {
+  .people-single__navigation {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.people-single__navigation a {
+  font-weight: var(--link-1-font-weight);
+  font-size: var(--link-1-font-size);
+  font-family: var(--link-1-font-family);
+  line-height: var(--link-1-line-height);
+  letter-spacing: var(--link-1-letter-spacing);
+  text-transform: var(--link-1-text-transform);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none !important;
+}
+@media (min-width: 48rem) and (max-width: 61.98rem) {
+  .people-single__navigation a {
+    justify-content: center;
+    padding: 0;
+    text-align: center !important;
+  }
+}
+@media (max-width: 35.98rem) {
+  .people-single__navigation a {
+    justify-content: center;
+    padding: 0;
+    text-align: center !important;
+  }
+}
+.people-single__navigation a:first-child {
+  padding-right: 0.625rem;
+}
+@media (min-width: 48rem) and (max-width: 61.98rem) {
+  .people-single__navigation a:first-child {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 35.98rem) {
+  .people-single__navigation a:first-child {
+    margin-bottom: 1rem;
+  }
+}
+.people-single__navigation a:last-child {
+  padding-left: 0.625rem;
+  text-align: right;
+}
+@media (min-width: 36rem) {
+  .people-single__navigation a[rel=prev] {
+    margin-left: auto;
+  }
+}
+.people-single__navigation .icon {
+  font-size: 1.25rem;
+}
+.people-single__sidebar-col {
+  order: 1;
+}
+@media (max-width: 47.98rem) {
+  .people-single__sidebar-col {
+    order: 2;
+  }
+}
+.people-single__sidebar {
+  font-weight: var(--body-2-font-weight);
+  font-size: var(--body-2-font-size);
+  font-family: var(--body-2-font-family);
+  line-height: var(--body-2-line-height);
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: clamp(1.25rem, 0.3928571429rem + 1.7857142857vw, 2rem);
+  column-gap: 1.25rem;
+  overflow: hidden;
+}
+@media (min-width: 36rem) {
+  .people-single__sidebar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 48rem) {
+  .people-single__sidebar {
+    display: block;
+    max-width: 23rem;
+    margin-bottom: auto;
+  }
+}
+.people-single__sidebar p {
+  font-weight: var(--body-2-font-weight);
+  font-size: var(--body-2-font-size);
+  font-family: var(--body-2-font-family);
+  line-height: var(--body-2-line-height);
+  margin-bottom: var(--body-2-margin-bottom);
+}
+.people-single__sidebar p:last-child {
+  margin-bottom: 0;
+}
+.people-single__sidebar ul {
+  margin-left: 0;
+}
+.people-single__sidebar li {
+  margin-bottom: 1rem;
+}
+.people-single__sidebar li:last-child {
+  margin-bottom: 0;
+}
+.people-single__sidebar-section {
+  margin-bottom: clamp(1.5rem, 0.9285714286rem + 1.1904761905vw, 2rem);
+  padding-left: 1rem;
+  border-left: 1px solid #6f7086;
+}
+.people-single__sidebar-section:last-child {
+  margin-bottom: 0;
+}
+.people-single__sidebar-heading {
+  color: #bdbfd1;
+}
+.people-single__social-buttons {
+  margin-top: 0 !important;
+  margin-bottom: 2rem !important;
+}
+.people-single__decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #74a9af88, #1c306277), url(../../assets/Section/profile/1.jpeg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto 135%;
+  opacity: 0.4;
+  overflow: hidden;
+  pointer-events: none;
+}
+.people-single__decoration2{
+    background: linear-gradient(to right, #74a9af88, #1c306277), url(../../assets/person/1.jpg);
+}
+.people-single__image-wrapper {
+  margin-bottom: 2rem;
+  padding-bottom: 114.47368421%;
+}
+@media (min-width: 36rem) and (max-width: 47.98rem) {
+  .people-single__image-wrapper {
+    grid-column: 1/2;
+    margin: auto;
+  }
+}
+.people-single__image-wrapper:last-child {
+  margin-bottom: 0;
+}
+.people-single .default-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}

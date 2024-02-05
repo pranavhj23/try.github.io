@@ -1,0 +1,199 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+@media (max-width: 61.98rem) {
+    .block-primary-nav-item {
+      padding: 0 1.25rem;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 4rem;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item > .wp-block-button {
+      position: relative;
+      z-index: 999;
+      margin: auto 0 auto 0;
+    }
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-item > .wp-block-button.is-style-text {
+      margin: 0;
+      border-bottom: 1px solid #bdbfd1;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item > .wp-block-button.is-style-text::before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: clamp(1.5rem, -0.7142857143rem + 3.5714285714vw, 2.5rem);
+      content: "";
+      height:5px;
+      background-color: #4bc031;
+      transform: scaleX(0);
+      transform-origin: bottom left;
+      pointer-events: none;
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item > .wp-block-button.is-style-text.active::before {
+      transform: scaleX(1);
+    }
+  }
+  .block-primary-nav-item > .wp-block-button.is-style-text .wp-block-button__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    color: #0d0d0d;
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-item > .wp-block-button.is-style-text .wp-block-button__link {
+      width: 100%;
+      padding: 1rem 0rem;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item > .wp-block-button.is-style-text .wp-block-button__link {
+      padding-right: clamp(1.5rem, -0.7142857143rem + 3.5714285714vw, 2.5rem);
+      font-size: clamp(0.875rem, 0.5982142857rem + 0.446429vw, 2rem);
+      line-height: 1.25;
+    }
+  }
+  body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-text .wp-block-button__link {
+    color: #fcfcfc;
+  }
+  body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-primary .wp-block-button__link {
+    color: #0737cf;
+    border-color: #fcfcfc;
+    background-color: #fcfcfc;
+  }
+  body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-primary .wp-block-button__link:hover, body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-primary .wp-block-button__link:focus {
+    color: #0737cf;
+    border-color: #fcfcfc;
+    background-color: #fcfcfc;
+  }
+  body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-secondary .wp-block-button__link {
+    color: #fcfcfc;
+    border-color: #fcfcfc;
+  }
+  body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-secondary .wp-block-button__link:hover, body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-secondary .wp-block-button__link:focus {
+    color: #fcfcfc;
+    border-color: #4bc031;
+    background-color: transparent;
+  }
+  body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-tertiary .wp-block-button__link {
+    color: #fcfcfc;
+  }
+  body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-tertiary .wp-block-button__link::before {
+    background-color: #fcfcfc;
+  }
+  body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-tertiary .wp-block-button__link:hover, body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-tertiary .wp-block-button__link:focus {
+    color: #fcfcfc;
+  }
+  body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-tertiary .wp-block-button__link:hover::before, body.page-has-alt-nav:not(.primary-submenu-open):not(.primary-menu-open):not(.scrolled) .block-primary-nav-item > .wp-block-button.is-style-tertiary .wp-block-button__link:focus::before {
+    background-color: #4bc031;
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-item > .wp-block-button:not(.is-style-text) {
+      margin-top: 2rem;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item > .wp-block-button:not(.is-style-text) {
+      margin-right: clamp(0.75rem, -0.3571428571rem + 1.7857142857vw, 1.25rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item > .wp-block-button:not(.is-style-text) .wp-block-button__link {
+      font-weight: var(--link-2-font-weight);
+      font-size: var(--link-2-font-size);
+      font-family: var(--link-2-font-family);
+      line-height: var(--link-2-line-height);
+      letter-spacing: var(--link-2-letter-spacing);
+      text-transform: var(--link-2-text-transform);
+      padding: 0.3125rem 0.9375rem;
+    }
+  }
+  .block-primary-nav-item > .wp-block-button:not(:only-child) .wp-block-button__link::after {
+    content: "\ea11";
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: "iconfont-propel";
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-item > .wp-block-button:not(:only-child) .wp-block-button__link::after {
+      padding-left: 1rem;
+      color: #0737cf;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item > .wp-block-button:not(:only-child) .wp-block-button__link::after {
+      content: "\ea0f";
+      transition: transform 0.4s ease-in-out;
+      margin-left:10px;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item > .wp-block-button:not(:only-child).active .wp-block-button__link::after {
+      transform: rotate(180deg);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item.is-style-align-right {
+      order: 999;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item.is-style-align-right > .wp-block-button {
+      margin: auto 0 auto clamp(1.5rem, 0.3571428571rem + 2.380952381vw, 2.5rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-item.is-style-align-right > .wp-block-button:not(.is-style-text) {
+      margin-left: clamp(0.75rem, -0.3571428571rem + 1.7857142857vw, 1.25rem);
+    }
+  }

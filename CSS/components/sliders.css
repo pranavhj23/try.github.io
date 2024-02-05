@@ -1,0 +1,329 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+/* Slider */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .slick-list:focus {
+    outline: none;
+  }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+  
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table;
+  }
+  .slick-track:after {
+    clear: both;
+  }
+  .slick-loading .slick-track {
+    visibility: hidden;
+  }
+  
+  .slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    display: none;
+  }
+  [dir=rtl] .slick-slide {
+    float: right;
+  }
+  .slick-slide img {
+    display: block;
+  }
+  .slick-slide.slick-loading img {
+    display: none;
+  }
+  .slick-slide.dragging img {
+    pointer-events: none;
+  }
+  .slick-initialized .slick-slide {
+    display: block;
+  }
+  .slick-loading .slick-slide {
+    visibility: hidden;
+  }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+  
+  .slick-arrow.slick-hidden {
+    display: none;
+  }
+  
+  /* Slider Global */
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    color: #fcfcfc;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    border: none;
+    border: 1px solid #0737cf;
+    border-radius: 50%;
+    background: #0737cf;
+    box-shadow: none;
+    cursor: pointer;
+    transform: translate(0, -50%);
+    transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+  }
+  .slick-arrow--secondary {
+    color: #0737cf;
+    border-color: #0737cf;
+    background-color: transparent;
+  }
+  .slick-arrow--secondary:hover, .slick-arrow--secondary:focus {
+    color: #0737cf !important;
+    border-color: #4bc031 !important;
+    background-color: transparent !important;
+  }
+  .slick-arrow--secondary.slick-arrow--color-alt {
+    color: #fcfcfc !important;
+    border-color: #fcfcfc !important;
+    background-color: transparent !important;
+  }
+  .slick-arrow--secondary.slick-arrow--color-alt:hover, .slick-arrow--secondary.slick-arrow--color-alt:focus {
+    color: #fcfcfc !important;
+    border-color: #4bc031 !important;
+    background-color: transparent !important;
+  }
+  .slick-arrow::after {
+    content: "";
+    color: inherit;
+    line-height: 3rem;
+    pointer-events: none;
+  }
+  .slick-arrow:hover, .slick-arrow:focus {
+    color: #0a0028;
+    border-color: #4bc031;
+    background-color: #4bc031;
+  }
+  .bg-navy .slick-arrow, .bg-indigo .slick-arrow, .slick-arrow.slick-arrow--color-alt {
+    color: #0737cf;
+    border-color: #fcfcfc;
+    background-color: #fcfcfc;
+  }
+  .bg-navy .slick-arrow:hover, .bg-navy .slick-arrow:focus, .bg-indigo .slick-arrow:hover, .bg-indigo .slick-arrow:focus, .slick-arrow.slick-arrow--color-alt:hover, .slick-arrow.slick-arrow--color-alt:focus {
+    color: #0a0028;
+    border-color: #4bc031;
+    background-color: #4bc031;
+  }
+  .slick-arrow.slick-prev {
+    left: 1.875rem;
+  }
+  .slick-arrow.slick-prev::after {
+    content: "\ea10";
+    font-weight: 400;
+    font-size: 2.25rem;
+    font-family: "iconfont-propel";
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .slick-arrow.slick-next {
+    right: 1.875rem;
+  }
+  .slick-arrow.slick-next::after {
+    content: "\ea11";
+    font-weight: 400;
+    font-size: 2.25rem;
+    font-family: "iconfont-propel";
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .slick-prev-arrow-wrapper,
+  .slick-next-arrow-wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    margin-top: 3rem;
+    margin-bottom: -0.625rem;
+    border: none !important;
+    border-radius: 0;
+    background-color: transparent !important;
+    box-shadow: none;
+    transform: none;
+    pointer-events: none;
+  }
+  @media (min-width: 48rem) {
+    .slick-prev-arrow-wrapper,
+  .slick-next-arrow-wrapper {
+      grid-area: 1/6/2/13;
+      width: 100%;
+      max-width: 39rem;
+      text-align: left;
+    }
+  }
+  .acf-block[class*="--has-heading-content"] .slick-prev-arrow-wrapper,
+  .acf-block[class*="--has-heading-content"] .slick-next-arrow-wrapper {
+    position: absolute;
+    top: -6rem;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  @media (min-width: 48rem) {
+    .acf-block[class*="--has-heading-content"] .slick-prev-arrow-wrapper,
+  .acf-block[class*="--has-heading-content"] .slick-next-arrow-wrapper {
+      top: 0;
+    }
+  }
+  .slick-prev-arrow-wrapper .slick-arrow,
+  .slick-next-arrow-wrapper .slick-arrow {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    pointer-events: auto;
+  }
+  
+  .slick-prev-arrow-wrapper {
+    order: 2;
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
+  @media (min-width: 48rem) {
+    .slick-prev-arrow-wrapper {
+      margin: auto auto 4.25rem auto;
+    }
+  }
+  .acf-block[class*="--has-heading-content"] .slick-prev-arrow-wrapper {
+    left: 0;
+  }
+  @media (min-width: 48rem) {
+    .acf-block[class*="--has-heading-content"] .slick-prev-arrow-wrapper {
+      left: auto;
+      right: clamp(5.25rem, 2.1071428571rem + 6.5476190476vw, 8rem);
+    }
+  }
+  
+  .slick-next-arrow-wrapper {
+    order: 3;
+    margin-right: auto;
+    margin-left: 0.5rem;
+  }
+  @media (min-width: 48rem) {
+    .slick-next-arrow-wrapper {
+      margin: auto auto 4.25rem auto;
+      padding-left: 3.5rem;
+    }
+  }
+  .acf-block[class*="--has-heading-content"] .slick-next-arrow-wrapper {
+    left: 3.5rem;
+  }
+  @media (min-width: 48rem) {
+    .acf-block[class*="--has-heading-content"] .slick-next-arrow-wrapper {
+      left: auto;
+      right: clamp(1.25rem, -1.8928571429rem + 6.5476190476vw, 4rem);
+    }
+  }
+  
+  .slick-dots li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .slick-dots .slick-dot--page-count {
+    font-weight: var(--overline-font-weight);
+    font-size: var(--overline-font-size);
+    font-family: var(--overline-font-family);
+    line-height: var(--overline-line-height);
+    letter-spacing: var(--overline-letter-spacing);
+    text-transform: var(--overline-text-transform);
+    display: none;
+    color: #343a7a;
+  }
+  .bg-navy .slick-dots .slick-dot--page-count {
+    color: #bdbfd1;
+  }
+  .slick-dots .slick-dot--page-count.slick-active {
+    display: block;
+  }

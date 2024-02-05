@@ -1,0 +1,110 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-footer-bottom {
+    font-weight: var(--subtitle-3-font-weight);
+    font-size: var(--subtitle-3-font-size);
+    font-family: var(--subtitle-3-font-family);
+    line-height: var(--subtitle-3-line-height);
+    padding-top: 1rem;
+  }
+  @media (min-width: 48rem) {
+    .block-footer-bottom__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .block-footer-bottom p {
+    font-weight: var(--subtitle-3-font-weight);
+    font-size: var(--subtitle-3-font-size);
+    font-family: var(--subtitle-3-font-family);
+    line-height: var(--subtitle-3-line-height);
+    margin-bottom: 0.5rem;
+    color: #bdbfd1;
+  }
+  @media (min-width: 48rem) {
+    .block-footer-bottom p {
+      margin-bottom: 0;
+    }
+  }
+  .block-footer-bottom a:not(.wp-block-button__link) {
+    color: #bdbfd1 !important;
+    text-decoration: none !important;
+  }
+  .block-footer-bottom a:not(.wp-block-button__link):hover, .block-footer-bottom a:not(.wp-block-button__link):focus {
+    color: #fcfcfc !important;
+  }
+  .block-footer-bottom .block-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 48rem) {
+    .block-footer-bottom .block-content {
+      flex-wrap: nowrap;
+    }
+  }
+  .block-footer-bottom .block-content p {
+    margin-right: 0.75rem;
+  }
+  @media (max-width: 47.98rem) {
+    .block-footer-bottom .block-content p:first-child {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  .block-footer-bottom .wp-block-buttons {
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+  }
+  @media (min-width: 48rem) {
+    .block-footer-bottom .wp-block-buttons {
+      margin-top: 0;
+    }
+  }
+  .block-footer-bottom .wp-block-button {
+    display: flex;
+  }
+  .block-footer-bottom .wp-block-button.is-style-social {
+    margin: 0;
+  }
+  .block-footer-bottom .wp-block-button.is-style-social .wp-block-button__link {
+    padding: 0;
+    color: #fcfcfc;
+    border: none;
+    transition: color 0.2s linear;
+  }
+  .block-footer-bottom .wp-block-button.is-style-social .wp-block-button__link:hover, .block-footer-bottom .wp-block-button.is-style-social .wp-block-button__link:focus {
+    color: #f0f2f9;
+  }

@@ -1,0 +1,192 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-primary-nav-mega-menu {
+    display: contents;
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu--wide .block-primary-nav-mega-menu__content {
+      padding: 0 clamp(1.5rem, -1.8214285714rem + 5.3571428571vw, 3rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu {
+      position: fixed;
+      top: 5rem;
+      left: 0;
+      bottom: 0;
+      z-index: 9999999;
+      display: block;
+      width: calc(var(--vw, 1vw) * 100);
+      overflow: hidden;
+      pointer-events: none;
+    }
+  }
+  @media (min-width: 62rem) {
+    body.admin-bar .block-primary-nav-mega-menu {
+      top: calc(32px + 4rem);
+    }
+  }
+  .block-primary-nav-mega-menu__inner {
+    position: absolute;
+    transition: transform 0.4s ease-in-out;
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-mega-menu__inner {
+      top: -4rem;
+      left: 0;
+      z-index: 9999999;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-height: calc(var(--vh, 1vh) * 100);
+      padding: 1.25rem;
+      background-color: #fcfcfc;
+      transform: translateX(200%);
+      overflow: auto;
+      transition: transform 0.4s 0.4s ease-in-out;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu__inner {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 996;
+      opacity: 0;
+      transform: translate(-50%, calc(-100% - 4.0625rem));
+      pointer-events: auto;
+      transition: transform 0.4s ease-in-out, opacity 0s 0.4s ease-in-out;
+    }
+  }
+  @media (min-width: 62rem) and (min-width: 36rem) {
+    .block-primary-nav-mega-menu__inner {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 62rem) and (min-width: 48rem) {
+    .block-primary-nav-mega-menu__inner {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  .block-primary-nav-mega-menu__inner.hidden {
+    visibility: hidden;
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-mega-menu__inner.hidden {
+      transition: none;
+    }
+  }
+  @media (max-width: 61.98rem) {
+    body:not(.primary-menu-open) .block-primary-nav-mega-menu__inner {
+      transform: translate(200%, calc(var(--vh, 1vh) * 100));
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+  @media (min-width: 62rem) {
+    body.primary-submenu-visible .block-primary-nav-mega-menu__inner {
+      transition: transform 0s 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+  }
+  @media (max-width: 61.98rem) {
+    .wp-block-button.active + .block-primary-nav-mega-menu .block-primary-nav-mega-menu__inner {
+      visibility: visible;
+      transform: translateX(100%);
+    }
+  }
+  @media (min-width: 62rem) {
+    .wp-block-button.active + .block-primary-nav-mega-menu .block-primary-nav-mega-menu__inner {
+      z-index: 997;
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-50%, 0);
+      transition: transform 0.4s ease-in-out, opacity 0s ease-in-out;
+    }
+  }
+  @media (min-width: 62rem) {
+    body.primary-submenu-visible .wp-block-button.active + .block-primary-nav-mega-menu .block-primary-nav-mega-menu__inner {
+      transition: transform 0.4s ease-in-out, opacity 0.4s 0.4s ease-in-out;
+    }
+  }
+  .block-primary-nav-mega-menu__heading {
+    font-weight: var(--nav-1-font-weight);
+    font-size: var(--nav-1-font-size);
+    font-family: var(--nav-1-font-family);
+    line-height: var(--nav-1-line-height);
+    order: -1;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.25rem;
+    color: #343a7a;
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu__heading {
+      display: none;
+    }
+  }
+  .block-primary-nav-mega-menu__back-button {
+    order: -2;
+    max-width: max-content;
+    margin-left: 0;
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu__back-button {
+      display: none;
+    }
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-mega-menu__content {
+      width: 100%;
+      padding-top: 1.25rem;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu__content {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      grid-template-columns: var(--gridTemplateColumns);
+      max-width: max-content;
+      margin: 0 auto;
+      padding: 0 clamp(2rem, -1.3214285714rem + 5.3571428571vw, 3.5rem);
+      column-gap: clamp(1.5rem, 0.3928571429rem + 1.7857142857vw, 2rem);
+      transform: translateX(var(--menuOffset, 0) );
+      clip-path: polygon(0% 0%, 100% 0%, 100% calc(var(--openMenuBottom, 100%) - 4rem), 0% calc(var(--openMenuBottom, 100%) - 4rem));
+      transition: clip-path 0.4s ease-in-out;
+    }
+  }

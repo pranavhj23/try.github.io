@@ -1,0 +1,159 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-hero-display {
+    position: relative;
+    z-index: 1;
+    padding: clamp(6rem, 2.5714285714rem + 7.1428571429vw, 9rem) 0 !important;
+    overflow: hidden;
+  }
+  body.page-has-alt-nav .block-hero-display:first-child {
+    margin-top: -5rem;
+  }
+  body.page-has-alt-nav .block-hero-display:first-child::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: 0;
+    width: 100%;
+    height: 4rem;
+    background: linear-gradient(180deg, rgba(10, 17, 81, 0.75) 0%, rgba(10, 17, 81, 0) 100%);
+  }
+  @media (max-width: 47.98rem) {
+    body.page-has-alt-nav .block-hero-display:first-child::after {
+      z-index: 2;
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-hero-display {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: clamp(28.75rem, -4.1071428571rem + 68.4523809524vw, 57.5rem);
+    }
+  }
+  .block-hero-display__decoration {
+    display: none;
+  }
+  @media (min-width: 48rem) {
+    .block-hero-display__decoration {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -3;
+      display: block;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(10, 15, 65, 0.9) 0%, rgba(12, 19, 79, 0) 100%);
+    }
+  }
+  .block-hero-display.is-style-simple {
+    min-height: clamp(25rem, -3.5714285714rem + 59.5238095238vw, 50rem);
+  }
+  .block-hero-display.is-style-simple .block-hero-display__image-wrapper::before, .block-hero-display.is-style-simple .block-hero-display__image-wrapper::after {
+    display: none;
+  }
+  @media (min-width: 48rem) {
+    .block-hero-display__content {
+      max-width: 50%;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-hero-display__content {
+      max-width: 40.24390244%;
+    }
+  }
+  @media (max-width: 47.98rem) {
+    .block-hero-display__image + .block-hero-display__container .block-hero-display__content {
+      padding-top: 3rem;
+    }
+  }
+  .block-hero-display__image-wrapper {
+    position: relative;
+    pointer-events: none;
+  }
+  @media (max-width: 47.98rem) {
+    .block-hero-display__image-wrapper {
+      z-index: 1;
+      margin-top: calc(clamp(6rem, 2.5714285714rem + 7.1428571429vw, 9rem) * -1);
+      margin-bottom: 3rem;
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-hero-display__image-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .block-hero-display__image-wrapper::before, .block-hero-display__image-wrapper::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  .block-hero-display__image-wrapper::before {
+    top: 0;
+    left: 0;
+    background: url(../../images/overlay-2.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: clamp(18.5rem, -10.9411764706rem + 81.7810457516vw, 81.0625rem) auto;
+  }
+  .block-hero-display__image-wrapper::after {
+    bottom: 0;
+    right: 0;
+    background: url(../../images/overlay-1.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: clamp(23.4375rem, -14.9448529412rem + 106.6176470588vw, 105rem) auto;
+  }
+  .block-hero-display__image {
+    position: relative;
+    z-index: -3;
+    min-height: 15.125rem;
+    object-fit: cover;
+  }
+  @media (min-width: 48rem) {
+    .block-hero-display__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }

@@ -1,0 +1,160 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-primary-nav-featured-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    background-color: #f0f2f9;
+    overflow: hidden;
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-featured-page {
+      grid-row: 1/3;
+      justify-content: center;
+      align-items: center;
+      max-width: clamp(20rem, 14.2857142857rem + 11.9047619048vw, 25rem);
+      padding: clamp(2rem, -1.3214285714rem + 5.3571428571vw, 3.5rem);
+    }
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-featured-page {
+      margin: 1.5rem -1.25rem 0rem;
+    }
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-featured-page:last-child {
+      margin-bottom: -1.25rem;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-featured-page:last-child {
+      margin-right: clamp(-3.5rem, 1.3214285714rem + -5.3571428571vw, -2rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-featured-page:first-child {
+      margin-left: clamp(-3.5rem, 1.3214285714rem + -5.3571428571vw, -2rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu--wide .block-primary-nav-featured-page {
+      padding: clamp(1.5rem, -1.8214285714rem + 5.3571428571vw, 3rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu--wide .block-primary-nav-featured-page:last-child {
+      margin-right: clamp(-3rem, 1.8214285714rem + -5.3571428571vw, -1.5rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu--wide .block-primary-nav-featured-page:first-child {
+      margin-left: clamp(-3rem, 1.8214285714rem + -5.3571428571vw, -1.5rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-mega-menu--wide .block-primary-nav-featured-page:not(:first-child) {
+      margin-left: clamp(0rem, -2.2142857143rem + 3.5714285714vw, 1rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-featured-page:not(:first-child) {
+      margin-left: clamp(0.5rem, -1.7142857143rem + 3.5714285714vw, 1.5rem);
+    }
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-featured-page + .block-primary-nav-featured-page {
+      margin-top: 0;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-featured-page + .block-primary-nav-featured-page {
+      margin-left: 0;
+    }
+  }
+  .block-primary-nav-featured-page__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 31.25rem;
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-featured-page__inner {
+      max-width: 19rem;
+    }
+  }
+  .block-primary-nav-featured-page__inner::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: "";
+    z-index: -1;
+    width: 26rem;
+    height: 26rem;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(160, 182, 232, 0.44) 0%, rgba(160, 182, 232, 0) 100%);
+    transform: translate(50%, -50%);
+  }
+  .block-primary-nav-featured-page__content {
+    width: 100%;
+  }
+  .block-primary-nav-featured-page__image-wrapper {
+    margin-bottom: clamp(1rem, 0.4285714286rem + 1.1904761905vw, 1.5rem);
+    padding-bottom: 56.57894737%;
+    border-radius: 0rem 2rem 0rem 0rem;
+  }
+  .block-primary-nav-featured-page .wp-block-button {
+    margin-bottom: 0.5rem;
+  }
+  .block-primary-nav-featured-page .wp-block-button__link::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+  .block-primary-nav-featured-page p {
+    font-weight: var(--subtitle-2-font-weight);
+    font-size: var(--subtitle-2-font-size);
+    font-family: var(--subtitle-2-font-family);
+    line-height: var(--subtitle-2-line-height);
+    margin-bottom: var(--subtitle-2-margin-bottom);
+    margin-top: 0;
+    color: #343a7a;
+  }
+  .block-primary-nav-featured-page p:last-child {
+    margin-bottom: 0;
+  }

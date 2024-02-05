@@ -1,0 +1,207 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-testimonial-image {
+    position: relative;
+  }
+  .block-testimonial-image--has-heading-content .block-testimonial-image__container > *:not(.block-testimonials):not(div) {
+    display: block;
+    padding-right: 8.5rem;
+  }
+  .block-testimonial-image--has-heading-content .block-testimonial__content-col {
+    padding: 0;
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image--has-heading-content .block-testimonials {
+      position: static !important;
+    }
+  }
+  .block-testimonial-image__container {
+    position: relative;
+  }
+  .block-testimonial-image__container > *:not(.block-testimonials):not(div) ~ .block-testimonials {
+    margin-top: 7.5rem;
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image__container > *:not(.block-testimonials):not(div) ~ .block-testimonials {
+      margin-top: clamp(3rem, 1.2857142857rem + 3.5714285714vw, 4.5rem);
+    }
+  }
+  .block-testimonial-image__container > *:not(.block-testimonials):not(div) ~ .block-testimonials[data-slide-count="1"] {
+    margin-top: 2rem;
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image__container > *:not(.block-testimonials):not(div) ~ .block-testimonials[data-slide-count="1"] {
+      margin-top: clamp(0.75rem, -5.9166666667rem + 13.8888888889vw, 4.5rem);
+    }
+  }
+  .block-testimonial-image .block-testimonials {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image .block-testimonials {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      column-gap: clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem);
+    }
+  }
+  .block-testimonial-image .block-testimonials:not(:first-child) .block-testimonial__content-col {
+    padding: 0;
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image .block-testimonials:not(:first-child) .block-testimonial__content-col {
+      padding: 0rem 0rem 2.625rem 0rem;
+    }
+  }
+  .block-testimonial-image .block-testimonial__content {
+    font-weight: var(--quote-2-font-weight);
+    font-size: var(--quote-2-font-size);
+    font-family: var(--quote-2-font-family);
+    font-style: var(--quote-2-font-style);
+    line-height: var(--quote-2-line-height);
+    margin-bottom: clamp(1.5rem, 0.9285714286rem + 1.1904761905vw, 2rem);
+  }
+  .block-testimonial-image .block-testimonial__button {
+    margin-top: clamp(1.5rem, 0.9285714286rem + 1.1904761905vw, 2rem);
+  }
+  .block-testimonial-image .block-testimonial__slide-footer-content {
+    color: var(--blockColor, #343a7a);
+  }
+  .block-testimonial-image .block-testimonial {
+    margin: 0 0 clamp(1.5rem, 0.6428571429rem + 1.7857142857vw, 2.25rem) 0;
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image .block-testimonial {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      column-gap: clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem);
+      display: grid !important;
+      align-items: center;
+    }
+  }
+  .block-testimonial-image .block-testimonial p {
+    font-weight: var(--quote-2-font-weight);
+    font-size: var(--quote-2-font-size);
+    font-family: var(--quote-2-font-family);
+    font-style: var(--quote-2-font-style);
+    line-height: var(--quote-2-line-height);
+    --margin-top: calc(var(--quote-2-margin-bottom) * 2);
+    margin-bottom: var(--quote-2-margin-bottom);
+  }
+  .block-testimonial-image .block-testimonial p:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image .block-testimonial__image-col {
+      grid-column: 1/6;
+    }
+  }
+  .block-testimonial-image .block-testimonial__image-wrapper {
+    padding-bottom: 100%;
+    border-radius: 0 clamp(2.25rem, -0.3214285714rem + 5.3571428571vw, 4.5rem) 0 0;
+  }
+  @media (max-width: 47.98rem) {
+    .block-testimonial-image .block-testimonial__image-wrapper {
+      margin-bottom: 3rem;
+    }
+  }
+  .block-testimonial-image.bg-white .block-testimonial__content-col::before, .block-testimonial-image.bg-transparent .block-testimonial__content-col::before {
+    color: #f0f2f9;
+  }
+  .block-content-section.bg-gray-5 .block-testimonial-image.bg-transparent .block-testimonial__content-col::before {
+    color: #fcfcfc !important;
+  }
+  .block-testimonial-image .block-testimonial__content-col {
+    position: relative;
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image .block-testimonial__content-col {
+      grid-column: 6/13;
+      max-width: 39rem;
+      margin: auto;
+      padding: 2rem 0rem 7.5rem 0rem;
+    }
+  }
+  .block-testimonial-image .block-testimonial__content-col::before {
+    content: "\ea2f";
+    font-weight: 400;
+    font-size: 7rem;
+    font-family: "iconfont-propel";
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    z-index: -1;
+    display: block;
+    margin-bottom: -4.5rem;
+    color: #fcfcfc;
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image .block-testimonial__content-col::before {
+      margin-bottom: -3.25rem;
+    }
+  }
+  @media (min-width: 75rem) {
+    .block-testimonial-image .block-testimonial__content-col::before {
+      transform: translateX(clamp(-4.5rem, 22.5rem + -30vw, 0rem));
+    }
+  }
+  .block-testimonial-image .block-testimonial__quote-icon {
+    display: none;
+  }
+  .block-testimonial-image .block-testimonial__logo {
+    height: auto;
+    margin: 0 auto clamp(1rem, 0.4285714286rem + 1.1904761905vw, 1.5rem) 0;
+  }
+  @media (max-width: 47.98rem) {
+    .block-testimonial-image .slick-list {
+      flex: 0 0 100%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-testimonial-image .slick-list {
+      grid-area: 1/1/2/13;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 47.98rem) {
+    .block-testimonial-image .slick-arrow {
+      margin-top: 0;
+    }
+  }

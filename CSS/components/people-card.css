@@ -1,0 +1,68 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.people-card {
+    padding: 0;
+    color: #0a0028;
+    border-radius: 0 clamp(3rem, 1.6153846154rem + 3.8461538462vw, 4.5rem) 0 0;
+    overflow: hidden;
+  }
+  .people-card:hover .people-card__title, .people-card:focus .people-card__title {
+    color: #0737cf;
+  }
+  .people-card:hover .people-card__image, .people-card:focus .people-card__image {
+    transform: scale(1.046);
+  }
+  .people-card__image-wrapper {
+    margin-bottom: 1.25rem;
+    padding-bottom: 114.47368421%;
+    border-radius: 0 4.5rem 0 0;
+  }
+  .people-card__title {
+    font-weight: var(--title-1-font-weight);
+    font-size: var(--title-1-font-size);
+    font-family: var(--title-1-font-family);
+    line-height: var(--title-1-line-height);
+    margin-bottom: var(--title-1-margin-bottom);
+    --margin-top: 0;
+    transition: color 0.4s ease-in-out;
+  }
+  .people-card__title:last-child {
+    margin-bottom: 0;
+  }
+  .people-card__title-position {
+    font-weight: var(--subtitle-2-font-weight);
+    font-size: var(--subtitle-2-font-size);
+    font-family: var(--subtitle-2-font-family);
+    line-height: var(--subtitle-2-line-height);
+    color: #343a7a;
+  }

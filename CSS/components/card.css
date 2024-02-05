@@ -1,0 +1,103 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: #0d0d0d;
+    border-radius: 0.5rem;
+    background-color: #fcfcfc;
+    box-shadow: 0 0.3125rem 1.25rem rgba(10, 17, 81, 0.1);
+  }
+  .block-card h1, .block-card h2, .block-card h3, .block-card h4, .block-card h5, .block-card h6 {
+    font-weight: var(--title-1-font-weight);
+    font-size: var(--title-1-font-size);
+    font-family: var(--title-1-font-family);
+    line-height: var(--title-1-line-height);
+    --margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .block-card p {
+    font-weight: var(--subtitle-2-font-weight);
+    font-size: var(--subtitle-2-font-size);
+    font-family: var(--subtitle-2-font-family);
+    line-height: var(--subtitle-2-line-height);
+    margin-bottom: var(--subtitle-2-margin-bottom);
+  }
+  .block-card p:last-child {
+    margin-bottom: 0;
+  }
+  .block-card p:last-of-type:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+  .block-card .wp-block-button {
+    margin-top: auto;
+  }
+  .block-card .wp-block-button .wp-block-button__link {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+  }
+  .block-card .wp-block-button .wp-block-button__link::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    opacity: 0;
+  }
+  .block-card .wp-block-button .wp-block-button__link::after {
+    display: flex;
+    flex: 0 0 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #0737cf;
+    border-radius: 50%;
+    transition: border 0.2s linear;
+  }
+  .block-card .wp-block-button .wp-block-button__link:hover::after, .block-card .wp-block-button .wp-block-button__link:focus::after {
+    border-color: #4bc031;
+    transform: none;
+  }

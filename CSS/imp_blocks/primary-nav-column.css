@@ -1,0 +1,69 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+@media (min-width: 62rem) {
+    .block-primary-nav-column {
+      grid-row: 1/2;
+      padding: clamp(2rem, -1.3214285714rem + 5.3571428571vw, 3.5rem) 0;
+      margin-right: 4rem;
+    }
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-column > .wp-block-button.is-style-text {
+      margin: 0;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-primary-nav-column > .wp-block-button.is-style-text {
+      margin-bottom: 1.5rem;
+    }
+    .block-primary-nav-column > .wp-block-button.is-style-text:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .block-primary-nav-column > .wp-block-button.is-style-text .wp-block-button__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-column > .wp-block-button.is-style-text .wp-block-button__link {
+      width: 100%;
+      padding: 1rem 0rem;
+    }
+  }
+  @media (max-width: 61.98rem) {
+    .block-primary-nav-column > .wp-block-button:not(.is-style-text) {
+      margin-top: 2rem;
+    }
+  }

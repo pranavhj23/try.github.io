@@ -1,0 +1,141 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-content {
+    margin: 0;
+  }
+  .block-content > .is-style-narrow {
+    width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: 100% !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 36rem) {
+    .block-content > .is-style-narrow {
+      width: calc(var(--columnWidth) * 9 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 9 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-content > .is-style-narrow {
+      width: calc(var(--columnWidth) * 8 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 8 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-content > .is-style-narrow {
+      width: calc(var(--columnWidth) * 7 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 7 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 75rem) {
+    .block-content > .is-style-narrow {
+      width: calc(var(--columnWidth) * 6 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 6 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  .block-content > .is-style-default {
+    width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: 100% !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 36rem) {
+    .block-content > .is-style-default {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-content > .is-style-default {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-content > .is-style-default {
+      width: calc(var(--columnWidth) * 10 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 10 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 75rem) {
+    .block-content > .is-style-default {
+      width: calc(var(--columnWidth) * 8 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 8 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  .block-content > .is-style-full {
+    width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: 100% !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 36rem) {
+    .block-content > .is-style-full {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-content > .is-style-full {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  .block-content > .is-style-wide {
+    width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    max-width: 100% !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 36rem) {
+    .block-content > .is-style-wide {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 48rem) {
+    .block-content > .is-style-wide {
+      width: calc(var(--columnWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 12 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-content > .is-style-wide {
+      width: calc(var(--columnWidth) * 10 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+      max-width: calc(var(--columnMaxWidth) * 10 - clamp(1rem, -0.1428571429rem + 2.380952381vw, 2rem));
+    }
+  }

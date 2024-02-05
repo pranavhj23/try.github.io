@@ -1,0 +1,123 @@
+/* stylelint-disable order/order */
+/* stylelint-enable order/order */
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+/****************
+ * Effects
+ ****************/
+/****************
+ * Grid Settings
+ ****************/
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/
+.block-people-slider {
+    overflow: hidden;
+  }
+  .block-people-slider .people-card {
+    border-radius: 0 4.5rem 0 0;
+  }
+  .block-people-slider .people-card__image-wrapper {
+    width: calc(100% + 7rem);
+    max-width: calc(100% + 7rem);
+    transform: translateX(-7rem);
+    overflow: hidden;
+    clip-path: polygon(7rem 0%, 100% 0%, 100% 100%, 7rem 100%);
+    transition: transform 0.6s ease-in-out, clip-path 0.6s ease-in-out;
+  }
+  .block-people-slider .people-card__image {
+    width: 100%;
+    transform: translateX(3.5rem) !important;
+    transition: transform 0.6s ease-in-out !important;
+  }
+  @media (min-width: 62rem) {
+    .block-people-slider .slick-track:hover .slick-slide {
+      transform: translateX(-3.5rem);
+    }
+  }
+  .block-people-slider .slick-slide {
+    transition: transform 0.6s ease-in-out;
+  }
+  @media (min-width: 62rem) {
+    .block-people-slider .slick-slide:hover ~ .slick-slide {
+      transform: translateX(3.5rem);
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-people-slider .slick-slide:hover .people-card__image {
+      transform: translateX(0) !important;
+    }
+  }
+  @media (min-width: 62rem) {
+    .block-people-slider .slick-slide:hover .people-card__image-wrapper {
+      transform: translateX(0);
+      clip-path: polygon(0rem 0%, 100% 0%, 100% 100%, 0rem 100%);
+      /* stylelint-disable-line length-zero-no-unit */
+    }
+  }
+  .block-people-slider__content > *:last-child {
+    margin-bottom: clamp(4rem, 1rem + 6.25vw, 6.625rem);
+  }
+  .block-people-slider__slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 clamp(-1rem, 0.4732142857rem + -1.6369047619vw, -0.3125rem);
+  }
+  .block-people-slider__slide {
+    padding: 0 clamp(0.3125rem, -0.4732142857rem + 1.6369047619vw, 1rem);
+  }
+  .block-people-slider .slick-list {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  @media (min-width: 36rem) {
+    .block-people-slider .slick-list {
+      overflow: visible;
+    }
+  }
+  .block-people-slider .slick-arrow {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-top: 3rem;
+    transform: none;
+  }
+  .block-people-slider .slick-prev {
+    order: 2;
+    margin-right: 0.5rem;
+    margin-left: auto;
+  }
+  .block-people-slider .slick-next {
+    order: 3;
+    margin-right: auto;
+    margin-left: 0.5rem;
+  }
+  .block-people-slider .slick-dots {
+    position: absolute;
+    left: calc(50% + 2.25rem);
+    bottom: 0;
+  }
+  .block-people-slider .slick-dots button {
+    display: none;
+  }

@@ -1,0 +1,29 @@
+importment remaining
+
+Refactor css
+Navbar Improvement
+overview page new to add more component
+add privacy policy
+Make Multipage
+history page new to add more component
+get 
+
+
+
+
+
+
+DONE -
+Navbar working
+increase map size
+add social media icon
+change quick links
+add Contact Us message field
+History color check
+History Font remove
+
+
+
+
+
+
